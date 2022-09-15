@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Planet;
+use App\Http\Requests\PlanetRequest;
 
-
-class TaskController extends Controller
+class PlanetController extends Controller
 {
     public function index()
     {
