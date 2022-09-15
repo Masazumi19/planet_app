@@ -29,4 +29,27 @@ class PlanetController extends Controller
 
         return redirect('/planets');
     }
+
+    public function edit($id)
+    {
+        $planet = Planet::find($id);
+        return view('planets.edit', compact('planet'));
+    }
+
+        public function update(PlanetRequest $request, $id)
+    {
+        $planet = Planet::find($id);
+        $planet->name = $request->name;
+        $planet->name_en = $request->name_en;
+        $planet->radius= $request->radius;
+        $planet->weight= $request->weight;
+        $planet->save();
+        return redirect('/planets');
+    }
+
+    public function show($id)
+    {
+        $planet = Planet::find($id);
+        return view('planets.show', compact('planet'));
+    }
 }
