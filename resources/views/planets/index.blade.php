@@ -24,24 +24,24 @@
             <th></th>
             <th></th>
         </tr>
-        <tr>
-            <th>水星</th>
-            <th>MERCURY</th>
-            <th>2439</th>
-            <th>3310</th>
-            <th>詳細</th>
-            <th>編集</th>
-            <th><input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};"></th>
-        </tr>
-        <tr>
-            <th>金星</th>
-            <th>VENUS</th>
-            <th>6052</th>
-            <th>48700</th>
-            <th>詳細</th>
-            <th>編集</th>
-            <th><input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};"></th>
-        </tr>
+        @foreach ($planets as $planet)
+            <tr>
+                <td>{{ $planet->name }}</td>
+                <td>{{ $planet->name_en }}</td>
+                <td>{{ $planet->radius }}</td>
+                <td>{{ $planet->weight }}</td>
+                <td><a href="/planets/{{ $planet->id }}">詳細</a></td>
+                <td><a href="/planets/{{ $planet->id }}/edit">編集</a></td>
+                <td>
+                    <form action="/planets/{{ $planet->id }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};">
+                    </form>
+                </td>
+            </tr>
+        @endforeach
+
     </table>
     <p><a href="/planets/create">新規登録</a></p>
 </body>

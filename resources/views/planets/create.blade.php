@@ -15,25 +15,26 @@
 
     <form action="/planets" method="post">
         @csrf
-        <p><label for="name1">名前</label>
-            <input type="text" name="namae" id="name1" value="{{ old('name1') }}">
+        <p><label for="name">名前</label>
+            <input type="text" name="name" id="name" value="{{ old('name') }}">
         </p>
         <p>
-            <label for="name2">名前(英語)</label>
-            <input type="text" name="namae2" id="name2" value="{{ old('name2') }}">
-        </p>
-
-        <p>
-            <label for="hankei">半径</label>
-            <input type="text" name="hanekei" id="hankei" value="{{ old('hankei') }}">
+            <label for="name_en">名前(英語)</label>
+            <input type="text" name="name_en" id="name_en" value="{{ old('name_en') }}">
         </p>
 
         <p>
-            <label for="juryou">重量</label>
-            <input type="text" name="juryou" id="juryou" value="{{ old('juryou') }}">
+            <label for="radius">半径</label>
+            <input type="text" name="radius" id="radius" value="{{ old('radius') }}">
+        </p>
+
+        <p>
+            <label for="weight">重量</label>
+            <input type="text" name="weight" id="weight" value="{{ old('weight') }}">
         </p>
 
         <input type="submit" value="登録">
     </form>
+    <a href="/planets">戻る</a>
 </body>
 </html>
