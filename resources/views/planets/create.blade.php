@@ -22,17 +22,18 @@
             <label for="name2">名前(英語)</label>
             <input type="text" name="namae2" id="name2" value="{{ old('name2') }}">
         </p>
-        
+
         <p>
             <label for="hankei">半径</label>
-            <input type="text" name="hanekei" id="hankei"value="{{ old('hankei') }}">
+            <input type="text" name="hanekei" id="hankei" value="{{ old('hankei') }}">
         </p>
-        
+
         <p>
             <label for="juryou">重量</label>
-            <input type="text" name="juryou" id="juryou"value="{{ old('juryou') }}">
+            <input type="text" name="juryou" id="juryou" value="{{ old('juryou') }}">
         </p>
-        
+
         <input type="submit" value="登録">
     </form>
 </body>
+</html>
