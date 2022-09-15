@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,4 +43,5 @@
             <th><input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};"></th>
         </tr>
     </table>
-    <p><a href="">新規登録</a></p>
+    <p><a href="/planets/create">新規登録</a></p>
+</body>
