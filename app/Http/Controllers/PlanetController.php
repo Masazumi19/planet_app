@@ -52,4 +52,12 @@ class PlanetController extends Controller
         $planet = Planet::find($id);
         return view('planets.show', compact('planet'));
     }
+
+    public function destroy($id)
+    {
+        $planet = Planet::find($id);
+        $planet->delete();
+
+        return redirect('/planets');
+        }
 }
